@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta Libertadora - Biblioteca Interactiva</title>
+    <link rel="shortcut icon" href="img/icon_library.png" type="image/x-icon">
+    <!-- Fuentes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Librerías -->
+    <link rel="stylesheet" href="book/book-1/page-flip/page-flip.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="book/book-1/page-flip/page-flip.browser.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Contenedor de zoom -->
+    <div id="zoom-overlay">
+        <img id="zoom-img" src="" alt="">
+    </div>
+    <!-- Partículas -->
+    <div id="tsparticles"></div>
+    <header>
+        <img src="img/Logo_de_la_UPTC.svg.png" alt="Logo_de_la_UPTC" class="logo-uptc">
+        <div class="txt">
+            <h1 class="title">SALA 2: LIBRO INTERACTIVO </h1>
+            <p class="subtitle">Explora el combate en Paya</p>
+        </div>
+        <img src="img/Museo-Ruta-de-la-Libertad-Blanco.png" alt="logo-museo" class="logo-museo">
+    </header>
+
+    <div class="container">
+        <div id="flipbook">
+            <!-- Portada -->
+            <div class="page portada">
+                <div class="page-content">
+                    <!-- <h1>DÍAS PREVIOS</h1> -->
+                    <!-- <img src="img/portada_puente.png" alt="portada" class="character"> -->
+                    <!-- <h2>BATALLA DE BOYACÁ</h2> -->
+                </div>
+            </div>
+
+            <!-- Introducción -->
+            <div class="page">
+                <div class="page-content">
+                    <h3 class="title_escena">PRÓLOGO</h3>
+                    <p class="parrafo"></p>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <p class="parrafo"></p>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <h3 class="title_escena">Tabla de Contenido</h3>
+                    <ul class="tabla-contenido">
+                        <li><a href="#" data-page="5">1. Encuentro en Tame</a></li>
+                        <li><a href="#" data-page="7">2. La marcha comienza</a></li>
+                        <li><a href="#" data-page="9">3. El cruce del río Casanare</a>
+                        </li>
+                        <li><a href="#" data-page="11">4. Pore, alivio y reagrupamiento</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <ul class="tabla-contenido">
+                        <li><a href="#" data-page="13">5. Hato Nonato Pérez</a></li>
+                        <li><a href="#" data-page="15">6. La vanguardia avanza</a></li>
+                        <li><a href="#" data-page="17">7. Morcote bajo la lluvia</a></li>
+                        <li><a href="#" data-page="19">8. Primer combate de la campaña: Trincherón de Paya</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Contenido (16 páginas) -->
+            <!-- escena 1 -->
+            <div class="page">
+                <div class="page-content" id="page1">
+                    <h3 class="title_escena">Encuentro en Tame</h3>
+                    <p class="parrafo">En la noche del 12 de junio, bajo el cielo estrellado, entre el aroma de la
+                        sabana húmeda y murmullos de insectos nocturnos, en el caserío de Tame se asentó el campamento
+                        patriota. Oficiales y soldados bebían guarapo en totumas, muchos de ellos descalzos y sin
+                        camisa.
+                        Los generales Simón Bolívar y Francisco de Paula Santander sostenían una conversación decisiva,
+                        aquel encuentro sello la unión y organización de las fuerzas neogranadinas y venezolanas; es así
+                        que se consolidó el Estado Mayor del Ejército Libertador, dividido en batallones, escuadrones y
+                        divisiones, listo para emprender la gesta que cambiaría el curso de la historia para la Nueva
+                        Granada.
+                    </p>
+                    <button id="btn-audio" style="background: none; border: none; cursor: pointer;">
+                        <img src="img/icon_audio.png" alt="icon-audio" class="audio-button" data-audio="audio1">
+                    </button>
+                    <div class="page-number1" id="page-number">1</div>
+
+                    <audio id="audio1" src="audios/audio1.mp3"></audio>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <img src="img/imagenes/1.Escena 1. pintada png.png" alt="imagen_3" class="img_escena zoomable">
+                    <div class="page-number2" id="page-number">2</div>
+
+                </div>
+            </div>
+            <!-- escena 2 -->
+            <div class="page">
+                <div class="page-content">
+                    <img src="img/imagenes/2. Escena 2 salida de Tame_.png" alt="imagen_3" class="img_escena zoomable">
+                    <div class="page-number1" id="page-number">3</div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <h3 class="title_escena">La marcha comienza</h3>
+                    <p class="parrafo">Después de algunos días de descanso, el 17 de junio, en compañía del amanecer
+                        llanero, las tropas emprendieron su marcha desde Tame hacía el interior del país. Una larga
+                        columna de soldados se extendía en el horizonte de la sabana, eran casi tres mil hombres, entre
+                        ellos un grupo de mujeres conocidas como las juanas, marchando entre el sol inclemente y las
+                        fuertes lluvias.
+                        Los lanceros llaneros, con el torso desnudo, el sombrero al viento y las lanzas en mano abrían
+                        el paso; tras ellos batallones, formados por una multitud de hombres, además de reses para
+                        racionar a las tropas, acémilas cargando armas y municiones y los bueyes las provisiones. Paso a
+                        paso se avanzaba hacia la búsqueda de la libertad.
+                    </p>
+                    <button id="btn-audio" style="background: none; border: none; cursor: pointer;">
+                        <img src="img/icon_audio.png" alt="icon-audio" class="audio-button" data-audio="audio1">
+                    </button>
+                    <div class="page-number2" id="page-number">4</div>
+
+                    <audio id="audio2" src="audios/audio2.mp3"></audio>
+                </div>
+            </div>
+            <!-- escena 3 -->
+            <div class="page">
+                <div class="page-content">
+                    <h3 class="title_escena">El cruce del río Casanare</h3>
+                    <p class="parrafo">Las fuertes lluvias desbordaban los ríos, las aguas turbias y veloces el
+                        río Casanare cubrían a los caballos hasta el cuello, cruzarlo era un desafío mortal, algunos
+                        soldados dudaban ante la corriente que arrastraba reses, mulas con parque y bestias con carga.
+                        El 19 de junio el ejército cruzó el río, algunos nadaron por su cuenta, otros en grupos porque
+                        había quienes no sabían nadar, a pesar del miedo a ahogarse o encontrarse con babillas o rayas
+                        ocultas bajo el agua, la mayoría de ellos lograron cruzarlo. Las pérdidas fueron altas,
+                        perdiéndose vacas, caballos, víveres, provisiones y pertrechos. Esta situación llevó a desanimar
+                        la tropa, pero a pesar de las inclemencias siguió adelante.
+                    </p>
+                    <button id="btn-audio" style="background: none; border: none; cursor: pointer;"
+                        onclick="reproducirAudio('audio3')">
+                        <img src="img/icon_audio.png" alt="icon-audio" class="audio-button" data-audio="audio3">
+                    </button>
+                    <div class="page-number1" id="page-number">5</div>
+
+                    <audio id="audio3" src="audios/audio3.mp3"></audio>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <img src="img/imagenes/3. Escena 3 Cruce del Río Casanare.png" alt="imagen_3"
+                        class="img_escena zoomable">
+                    <div class="page-number2" id="page-number">6</div>
+                </div>
+            </div>
+            <!-- escena 4 -->
+            <div class="page">
+                <div class="page-content">
+                    <img src="img/imagenes/4. Escena 4 Llegada a Pore (1).png" alt="imagen_3"
+                        class="img_escena zoomable">
+                    <div class="page-number1" id="page-number">7</div>
+
+                </div>
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <h3 class="title_escena">Pore, alivio y reagrupamiento</h3>
+                    <p class="parrafo">Los patriotas avanzan, el 22 de junio la vanguardia observó que una pequeña
+                        capilla blanca se erguía como único punto de referencia en el horizonte llanero, ese día
+                        arribaron al pueblo de Pore. Las calles polvorientas del caserío vieron llegar hombres agotados,
+                        mojados, hambrientos, semidesnudos y algunos de ellos con los uniformes rasgados, con el ánimo
+                        menguado, debido a los kilómetros de marcha y a la pérdida de sus provisiones.
+
+                        Allí, nuevas tropas se unieron al ejército patriota, engrosando las filas bajo el mando de
+                        Santander.
+                    </p>
+                    <button id="btn-audio" style="background: none; border: none; cursor: pointer;">
+                        <img src="img/icon_audio.png" alt="icon-audio" class="audio-button" data-audio="audio4">
+                    </button>
+                    <div class="page-number2" id="page-number">8</div>
+
+                    <audio id="audio4" src="audios/audio4.mp3"></audio>
+                </div>
+            </div>
+            <!-- escena 5 -->
+            <div class="page">
+                <div class="page-content">
+                    <h3 class="title_escena">Hato Nonato Pérez</h3>
+                    <p class="parrafo">El coronel Nonato Pérez recibe al ejército en su hato, ofreciéndoles
+                        almuerzo, para ello sacrificó varias de sus reses y dispuso de racimos de plátanos y barriles de
+                        guarapo, mientras los soldados tomaban un merecido descanso. Fogatas ardían bajo el cielo
+                        abierto, con trozos de carne asándose lentamente al estilo llanero.
+                        Los generales en privacidad comentaban la información que traían los espías y discutían
+                        decisiones, mientras otros comandantes se encargaban de pormenores de la próxima ración para las
+                        tropas y de la logística de la marcha.
+                    </p>
+                    <button id="btn-audio" style="background: none; border: none; cursor: pointer;">
+                        <img src="img/icon_audio.png" alt="icon-audio" class="audio-button" data-audio="audio5">
+                    </button>
+                    <div class="page-number1" id="page-number">9</div>
+
+                    <audio id="audio5" src="audios/audio5.mp3"></audio>
+
+                </div>
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <img src="img/imagenes/5. Escena 5 El Hato de Nonato Pérez_.png" alt="imagen_3"
+                        class="img_escena zoomable">
+                    <div class="page-number2" id="page-number">10</div>
+
+                </div>
+            </div>
+            <!-- escena 6 -->
+            <div class="page">
+                <div class="page-content">
+                    <h3 class="title_escena">La vanguardia avanza</h3>
+                    <p class="parrafo">La vanguardia marchaba varios kilómetros adelante del grueso del ejército.
+                        Su misión era inspeccionar los caminos, evaluar las posibles posiciones de los soldados
+                        realistas, identificar lugares idóneos para acampar y recolectar víveres, animales y
+                        provisiones; por orden de los generales, los soldados debían obtener el permiso de los
+                        propietarios para tomar sus gallinas, cerdos y cosechas. La vanguardia no desaprovechaba la
+                        oportunidad de obtener caballos, que eran indispensables en las batallas, y reses que eran la
+                        principal fuente de alimento para las tropas.
+                        Algunas mujeres observaban con desconfianza y curiosidad, mientras otras se acercaban con comida
+                        y bebidas.
+                    </p>
+                    <button id="btn-audio" style="background: none; border: none; cursor: pointer;">
+                        <img src="img/icon_audio.png" alt="icon-audio" class="audio-button" data-audio="audio6">
+                    </button>
+                    <div class="page-number1" id="page-number">11</div>
+
+                    <audio id="audio6" src="audios/audio6.mp3"></audio>
+
+                </div>
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <img src="img/imagenes/" alt="imagen_3" class="img_escena zoomable">
+                    <div class="page-number2" id="page-number">12</div>
+
+                </div>
+            </div>
+            <!-- escena 7 -->
+            <div class="page">
+                <div class="page-content">
+                    <img src="img/imagenes/7. Escena 7 Llegada a amor cote.png" alt="imagen_3"
+                        class="img_escena zoomable">
+                    <div class="page-number1" id="page-number">13</div>
+
+                </div>
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <h3 class="title_escena">Morcote bajo la lluvia</h3>
+                    <p class="parrafoCenter">El 27 de junio el grueso del ejército llegó a Morcote bajo una intensa
+                        lluvia. La capilla doctrinera, envuelta en bruma y humedad, fue testigo del arribo de hombres y
+                        mujeres cansados y hambrientos, la comida comenzaba a escasear. El frío empezaba a sentirse con
+                        intensidad, especialmente en los soldados llaneros, quienes algunos empezaron a dudar en seguir
+                        avanzando, al final de la jornada la mayoría caían dormidos bajo techos improvisados, mientras
+                        algunos pocos oraban en silencio.</p>
+                    <button id="btn-audio" style="background: none; border: none; cursor: pointer;">
+                        <img src="img/icon_audio.png" alt="icon-audio" class="audio-button" data-audio="audio7">
+                    </button>
+                    <div class="page-number2" id="page-number">14</div>
+
+                    <audio id="audio7" src="audios/audio7.mp3"></audio>
+                </div>
+            </div>
+            <!-- escena 8 -->
+            <div class="page">
+                <div class="page-content">
+                    <h3 class="title_escena">Primer combate de la campaña: Trincherón de Paya</h3>
+                    <p class="parrafo">Mientras la retaguardia se asentaba en Morcote, la vanguardia se encontraba
+                        a inmediaciones del caserío de Paya. La información era clara: 300 soldados realistas defendían
+                        el paso.
+                        Los patriotas desde la distancia divisaron las ubicaciones de los realistas: el Trincherón, el
+                        caserío y el puente sobre el río, flanqueados por montañas y caminos angostos. El coronel
+                        Arredondo presentó su plan de ataque ante el general Santander, quien dio su aprobación a la
+                        táctica de ataque, el combate inició y el triunfo patriota selló un nuevo capítulo de la campaña
+                        libertadora.
+                    </p>
+                    <button id="btn-audio" style="background: none; border: none; cursor: pointer;">
+                        <img src="img/icon_audio.png" alt="icon-audio" class="audio-button" data-audio="audio8">
+                    </button>
+                    <div class="page-number1" id="page-number">15</div>
+
+                    <audio id="audio8" src="audios/audio8.mp3"></audio>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <img src="img/imagenes/8. Escena 8 Trincheron.png" alt="imagen_3" class="img_escena zoomable">
+                    <div class="page-number2" id="page-number">16</div>
+
+                </div>
+            </div>
+
+
+            <!-- Contraportada -->
+            <div class="page">
+                <div class="page-content">
+                    <img src="img/imagenes/3. Escena 3 Cruce del Río Casanare.png" alt="imagen_3"
+                        class="img_escena zoomable">
+                </div>
+            </div>
+            <div class="page contraportada">
+                <div class="page-content">
+                    <div class="contraportada">
+                        <img src="img/Museo-Ruta-de-la-Libertad-Blanco.png" alt="logo" class="museo_contra">
+                        <p>NARRATIVA DIAS PREVIOS </p>
+                        <p> ESTACIÓN MUSEOGRÁFICA BATALLA DE BOYACÁ</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegación -->
+        <div class="controls">
+            <a id="prev-btn"><img src="img/flecha-izquierda.png" alt="flecha-izquierda" class="btn_opc"></a>
+            <a id="btn_home"><img src="img/btn_home.png" alt="btn_home" class="btn_home"></a>
+            <a id="next-btn"><img src="img/flecha-derecha.png" alt="flecha-izquierda" class="btn_opc"></a>
+        </div>
+    </div>
+
+
+    </div>
+    <audio src="audios/page_flip.mp3" preload="auto" id="audio"></audio>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
